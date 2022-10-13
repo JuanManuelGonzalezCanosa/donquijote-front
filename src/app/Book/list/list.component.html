@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Libros</h3>
+        </div> 
+        <div class="card-body">
+            <table class="table table-hower">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Libro</th>
+                        <th>Nombre Autor</th>
+                        <th>Precio</th>
+                        <th>Strock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{book.idBook}}</td>
+                        <td>{{book.nameBook}}</td>
+                        <td>{{book.nameAuthor}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.stock}}</td>
+                        <td> 
+                            <button class="btn btn-warning" style="margin-left: 10px;">Editar</button>
+                            <button (click)="deleteBook(book.idBook)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

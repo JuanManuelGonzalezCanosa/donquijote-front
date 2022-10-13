@@ -1,0 +1,43 @@
+<div class="col-md-6 offset-md-3">
+    <h2 class="text-center">Crear un Libro</h2>
+    <form (ngSubmit)="createBookOnSubmit()">
+        <div class="form-goup">
+            <label> Nombre Libro: </label>
+            <input type="text"
+            class="form-control"
+            id = "nombre libro"
+            [(ngModel)]= "book.nameBook"
+            name = "nombre libro"
+            >
+        </div>
+        <div class="form-goup">
+            <label> Nombre Autor: </label>
+            <input type="text"
+            class="form-control"
+            id = "nombre autor"
+            [(ngModel)]= "book.nameAuthor"
+            name = "nombre autor"
+            >
+        </div>
+        <div class="form-goup">
+            <label> Precio: </label>
+            <input type="number"
+            class="form-control"
+            id = "precio"
+            [(ngModel)]= "book.price"
+            name = "precio"
+            >
+        </div>
+        <div class="form-goup">
+            <label> Stock: </label>
+            <input type="number"
+            class="form-control"
+            id = "stock"
+            [(ngModel)]= "book.stock"
+            name = "stock"
+            >
+        </div>
+
+        <button class="btn btn-success">Guardar Libro</button>
+    </form>
+</div>
