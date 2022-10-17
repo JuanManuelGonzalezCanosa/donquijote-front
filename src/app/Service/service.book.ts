@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class ServiceBook {
 
-  private listBookUrl="http://localhost:8080/book/list";
-  private createBookUrl="http://localhost:8080/book/create"
-  private deleteBookUrl="http://localhost:8080/book/delete"
-  private idBookUrl="http://localhost:8080/book"
-  private putBookUrl="http://localhost:8080/book/delete"
+  private listBookUrl=    "http://localhost:8080/book/listactive";
+  private createBookUrl=  "http://localhost:8080/book/create"
+  private deleteBookUrl=  "http://localhost:8080/book/deleteactive"
+  private idBookUrl=      "http://localhost:8080/book"
+  private putBookUrl=     "http://localhost:8080/book/delete"
 
   constructor(private httpClient : HttpClient) { }
 
@@ -25,14 +25,14 @@ export class ServiceBook {
   }
 
   putBook(book:Book) : Observable<Object>{
-    return this.httpClient.put<Book>(`${this.putBook}/${book}`, book);
+    return this.httpClient.put<Book>(`${this.putBookUrl}/${book}`, book);
   }
 
   idBook(id:number) : Observable<Object>{
-    return this.httpClient.get<Book>(`${this.idBook}/${id}`);
+    return this.httpClient.get<Book>(`${this.idBookUrl}/${id}`);
   }
 
-  deleteBook(id:number) : Observable<Object>{
-    return this.httpClient.delete(`${this.deleteBook}/${id}`);
+  deleteBookActive(id:number) : Observable<Object>{
+    return this.httpClient.put(`${this.deleteBookUrl}/${id}`,Book);
   }
 }

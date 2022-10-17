@@ -18,27 +18,33 @@ export class ListComponent implements OnInit {
     this.listBook();
   }
 
-  private listBook(){
+  listBook(){
     this.bookService.getBook().subscribe
     (dato => {
       this.books = dato;
     })
   }
 
-  private idBook(){
+  getIdBook(){
     this.bookService.idBook;
   }
 
-  deleteBook(id:number){
-    this.bookService.deleteBook(id).subscribe(
+  deleteBookActive(id:number){
+    this.bookService.deleteBookActive(id).subscribe(
       dato =>{
-        this.listBook
+        console.log(dato);
+        this.irAlInicio;
       }
     );
   }
 
-  private putBook(id:number){
+  putBook(id:number){
     this.router.navigate(['put', id]);
+  }
+
+  irAlInicio(){
+    this.ngOnInit();
+    this.router.navigate(['/list']);
   }
 
 }

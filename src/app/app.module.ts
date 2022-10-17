@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './Book/list/list.component';
 import { CreateComponent } from './Book/create/create.component';
 import { PutComponent } from './Book/put/put.component';
-import { DeleteComponent } from './Book/delete/delete.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceBook } from './Service/service.book';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ClientdataComponent } from './Book/clientdata/clientdata.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http'
     ListComponent,
     CreateComponent,
     PutComponent,
-    DeleteComponent
+    ClientdataComponent,
   ],
   imports: [
     BrowserModule,
