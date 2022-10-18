@@ -17,6 +17,9 @@ export class AppComponent {
   Create(){
     this.router.navigate(["create"])
   }
+  Client(){
+    this.router.navigate(["client"])
+  }
   Delete(){
     this.router.navigate(["delete"])
   }

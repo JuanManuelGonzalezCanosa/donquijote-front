@@ -18,9 +18,9 @@ export class ListComponent implements OnInit {
     this.listBook();
   }
 
-  listBook(){
-    this.bookService.getBook().subscribe
-    (dato => {
+  private listBook(){
+    this.bookService.getBook().subscribe(
+      dato => {
       this.books = dato;
     })
   }

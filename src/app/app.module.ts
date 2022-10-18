@@ -9,7 +9,8 @@ import { PutComponent } from './Book/put/put.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceBook } from './Service/service.book';
 import { HttpClientModule } from '@angular/common/http';
-import { ClientdataComponent } from './Book/clientdata/clientdata.component'
+import { ClientdataComponent } from './Book/clientdata/clientdata.component';
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { ClientdataComponent } from './Book/clientdata/clientdata.component'
     CreateComponent,
     PutComponent,
     ClientdataComponent,
+    FilterPipe,
+    
   ],
   imports: [
     BrowserModule,
